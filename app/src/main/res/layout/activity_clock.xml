@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/colorBackGround"
+    tools:context="benlingzhang.miaomiaoclock.ClockActivity">
+
+    <TextView
+        android:id="@+id/time_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/work_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text=""
+        android:textColor="@color/colorText"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="92sp" />
+
+    <Button
+        android:id="@+id/work_button"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/break_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:textColor="@color/colorButtonText"
+        android:background="@color/colorButton"
+        android:onClick="onClickStartWork"
+        android:text="@string/start_work" />
+
+    <Button
+        android:id="@+id/break_button"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/long_break"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:textColor="@color/colorButtonText"
+        android:background="@color/colorButton"
+        android:onClick="onClickStartBreak"
+        android:text="@string/start_break" />
+
+    <Button
+        android:id="@+id/long_break"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/reset_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:textColor="@color/colorButtonText"
+        android:background="@color/colorButton"
+        android:onClick="onClickStartLongBreak"
+        android:text="@string/start_long"/>
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:textColor="@color/colorButtonText"
+        android:background="@color/colorButton"
+        android:onClick="onClickReset"
+        android:text="@string/reset" />
+
+</RelativeLayout>
